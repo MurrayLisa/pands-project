@@ -17,8 +17,8 @@ The use of this data set in cluster analysis however is not common, since the da
 
 Source: https://en.wikipedia.org/wiki/Iris_flower_data_set
 
-https://www.google.com/search?client=firefox-b-d&biw=1360&bih=632&tbm=isch&sa=1&ei=JP6sXL_uDJKX1fAPrZiHqAU&q=Iris+setosa&oq=Iris+setosa&gs_l=img.3..0l2j0i24l8.17669.17669..18615...0.0..0.97.97.1......1....2j1..gws-wiz-img.CMaomzYn3jY#imgrc=yNydyrHqcxSW6M:
+The sepals are the lower, or outermost part of the flower, they are usually green in color however  in the case of the Iris flowers they are Purple, similar in color to the petal. As per the images below.
 
-https://www.google.com/search?client=firefox-b-d&biw=1360&bih=632&tbm=isch&sa=1&ei=Of6sXJvAEfma1fAP_LiDuAI&q=Iris+virginica&oq=Iris+virginica&gs_l=img.3..0l3j0i8i30j0i24l3.211970.211970..212938...0.0..0.116.116.0j1......1....2j1..gws-wiz-img.ZAeydmQCwBM#imgrc=yKIaKHMxIOyAVM:
+Source: https://www.quora.com/What-is-the-difference-between-sepals-and-petals
 
-https://www.google.com/search?client=firefox-b-d&biw=1360&bih=632&tbm=isch&sa=1&ei=EP-sXKi9Bu2F1fAPj-KgsAw&q=Iris+versicolor&oq=Iris+versicolor&gs_l=img.3..0l3j0i8i30j0i30l6.55419.57202..58183...0.0..2.138.1352.11j3......2....1j2..gws-wiz-img.....0..0i67j0i24.V1px9pQAbKU#imgrc=mOB7wyPVZ72mSM:
+![image](https://user-images.githubusercontent.com/47781978/55834337-94c4ae00-5b11-11e9-913d-b34b0501a92c.png)
