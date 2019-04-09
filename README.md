@@ -17,7 +17,8 @@ The use of this data set in cluster analysis however is not common, since the da
 
 Source: https://en.wikipedia.org/wiki/Iris_flower_data_set
 
-The sepals are the lower, or outermost part of the flower, they are usually green in color however  in the case of the Iris flowers they are Purple, similar in color to the petal. As per the images below.
+The sepals are the lower, or outermost part of the flower, they are usually green in color however  in the case of the Iris flowers they are Purple, similar in color to the petal. 
+As per the images below.
 
 Source: https://www.quora.com/What-is-the-difference-between-sepals-and-petals
 
