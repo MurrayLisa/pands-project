@@ -84,7 +84,7 @@ plt.show()
 '''
 
  
-# plotting box graph for sepal length
+'''# plotting box graph for sepal length
 sns.boxplot(x="class", y="sepallength", data=iris_data)
 plt.title('Sepal Length Comparsions')
 plt.gcf().canvas.set_window_title('Sepal Length')
@@ -101,6 +101,27 @@ plt.gcf().canvas.set_window_title('Petal Length')
 plt.show()
 
 sns.boxplot(x="class", y="petalwidth", data=iris_data)
+plt.title('Petal Width Comparsions')
+plt.gcf().canvas.set_window_title('Petal Width')
+plt.show()
+'''
+
+sns.violinplot(x="class", y="sepallength", data=iris_data)
+plt.title('Sepal Length Comparsions')
+plt.gcf().canvas.set_window_title('Sepal Length')
+plt.show()
+
+sns.violinplot(x="class", y="sepalwidth", data=iris_data)
+plt.title('Sepal Width Comparsions')
+plt.gcf().canvas.set_window_title('Sepal Width')
+plt.show()
+
+sns.violinplot(x="class", y="petallength", data=iris_data)
+plt.title('Petal Length Comparsions')
+plt.gcf().canvas.set_window_title('Petal Length')
+plt.show()
+
+sns.violinplot(x="class", y="petalwidth", data=iris_data)
 plt.title('Petal Width Comparsions')
 plt.gcf().canvas.set_window_title('Petal Width')
 plt.show()
