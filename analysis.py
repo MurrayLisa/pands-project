@@ -72,19 +72,20 @@ print ("Iris-virginica min petal length is: " , iris_data2.loc["Iris-virginica",
 print ("Iris-virginica max petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].max())
 print ("Iris-virginica mean petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].mean())
 print ("Iris-virginica min petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].min())
-'''
+
 
 # Below data is a summary of all data, however it does not distunguish between the class/sprecies of iris
-'''summary = iris_data.describe()
+summary = iris_data.describe()
 summary = summary.transpose()
 print (summary.head())
 
 iris_data.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.gcf().canvas.set_window_title('Iris Attributes Comparsions for all Species')
 plt.show()
-'''
+
 
  
-'''# plotting box graph for sepal length
+# plotting box graph for sepal length
 sns.boxplot(x="class", y="sepallength", data=iris_data)
 plt.title('Sepal Length Comparsions')
 plt.gcf().canvas.set_window_title('Sepal Length')
@@ -104,7 +105,7 @@ sns.boxplot(x="class", y="petalwidth", data=iris_data)
 plt.title('Petal Width Comparsions')
 plt.gcf().canvas.set_window_title('Petal Width')
 plt.show()
-'''
+
 
 sns.violinplot(x="class", y="sepallength", data=iris_data)
 plt.title('Sepal Length Comparsions')
@@ -124,4 +125,10 @@ plt.show()
 sns.violinplot(x="class", y="petalwidth", data=iris_data)
 plt.title('Petal Width Comparsions')
 plt.gcf().canvas.set_window_title('Petal Width')
+plt.show()'''
+
+
+dataset = pd.melt(iris_data, "class", var_name="Attrubute")
+sns.swarmplot(x="Attrubute", y="value", hue="class", data=dataset)
+plt.gcf().canvas.set_window_title('Swarm Plot of all Iris Data')
 plt.show()
