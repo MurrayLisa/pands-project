@@ -74,10 +74,17 @@ print ("Iris-virginica mean petal width is: " , iris_data2.loc["Iris-virginica",
 print ("Iris-virginica min petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].min())
 '''
 
-
-
-
-summary = iris_data.describe()
+# Below data is a summary of all data, however it does not distunguish between the class/sprecies of iris
+'''summary = iris_data.describe()
 summary = summary.transpose()
 print (summary.head())
 
+iris_data.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
+'''
+
+
+# plotting box graph
+sns.boxplot(x="class", y="sepallength", data=iris_data)
+
+plt.show()
