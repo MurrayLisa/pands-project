@@ -1,4 +1,6 @@
+'''
 import pandas as pd
+
 iris_data = pd.read_csv('data.csv')
 iris_data2 = iris_data.set_index("class", drop = False)
 print ("Iris-setosa max sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].max())
@@ -21,5 +23,18 @@ print ("The shortest sepal length for all flower type is: " , iris_data2["sepall
 print ("The shortest sepal width for all flower type is: " , iris_data2["sepalwidth"].min())
 print ("The shortest petal length for all flower type is: " , iris_data2["petallength"].min())
 print ("The shortest petal width for all flower type is: " , iris_data2["petalwidth"].min())
+'''
+#   Using Pandas library to provide data structures and data anaylsis tools
+import pandas as pd
+
+# Using Numpy library as it consists of multidimensional array objects and a collection of routines for processing those arrays
+import numpy as np
+
+# Using seaborn library as it provides a high-level interface for drawing attractive statistical graphics.
+import seaborn as sns
+
+
+
+
 
 
