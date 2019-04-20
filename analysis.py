@@ -33,6 +33,11 @@ import numpy as np
 # Using seaborn library as it provides a high-level interface for drawing attractive statistical graphics.
 import seaborn as sns
 
+# the Iris data sets is being read through the csv file
+iris_data = pd.read_csv('data.csv')
+
+# Output the results of the data set that is the number of colums and rows
+print (iris_data.shape)
 
 
 
