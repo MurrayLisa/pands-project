@@ -8,19 +8,24 @@ import numpy as np
 # Using seaborn library as it provides a high-level interface for drawing attractive statistical graphics.
 import seaborn as sns
 
+import matplotlib.pyplot as plt
+
 # the Iris data sets is being read through the csv file
 iris_data = pd.read_csv('data.csv')
+
+iris_data.head()
 
 # Output the results of the data set that is the number of colums and rows
 (iris_data.shape)
 
+
 iris_data['class'].unique()
-print(iris_data.groupby('class').size())
+(iris_data.groupby('class').size())
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
 
 iris_data2 = iris_data.set_index("class", drop = False)
 
-print ("Iris-setosa max sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].max())
+'''print ("Iris-setosa max sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].max())
 print ("Iris-setosa mean sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].mean())
 print ("Iris-setosa min sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].min())
 
@@ -67,5 +72,12 @@ print ("Iris-virginica min petal length is: " , iris_data2.loc["Iris-virginica",
 print ("Iris-virginica max petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].max())
 print ("Iris-virginica mean petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].mean())
 print ("Iris-virginica min petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].min())
+'''
 
+
+
+
+summary = iris_data.describe()
+summary = summary.transpose()
+print (summary.head())
 
