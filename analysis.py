@@ -84,7 +84,15 @@ plt.show()
 '''
 
 
-# plotting box graph
+# plotting box graph for sepal length
 sns.boxplot(x="class", y="sepallength", data=iris_data)
+plt.show()
 
+sns.boxplot(x="class", y="sepalwidth", data=iris_data)
+plt.show()
+
+sns.boxplot(x="class", y="petallength", data=iris_data)
+plt.show()
+
+sns.boxplot(x="class", y="petalwidth", data=iris_data)
 plt.show()
