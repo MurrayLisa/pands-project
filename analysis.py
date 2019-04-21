@@ -143,17 +143,6 @@ sepallength_min = [4.3, 4.9, 4.9]
 sepallength_mean = [5.0, 5.9, 6.6]
 sepallength_max = [5.8, 7.0, 7.9]
 
-
-a=np.array([[4.3, 4.9, 4.9], [5.0, 5.9, 6.6], [5.8, 7.0, 7.9], [2.3, 2.0, 2.2], [3.4, 2.8, 3.0], [4.4, 3.4, 3.8]])
-df=pd.DataFrame(a, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['sepallength_min','sepallength_mean','sepallength_max', 'sepalwidth_min', 'sepalwidth_mean', 'sepalwidth_max'])
-
-#y_pos = [2,2,2,2,2]
-df.plot(kind='bar', rot= 0, figsize= (10,5)) 
-plt.gcf().canvas.set_window_title('sepal comparsions')
-plt.show()
-
-
-'''
 sepalwidth_min = (2.3, 2.0, 2.2)
 sepalwidth_mean = (3.4, 2.8, 3.0)
 sepalwidth_max = (4.4, 3.4, 3.8)
@@ -165,5 +154,21 @@ petallength_max = (1.9, 5.1, 6.9)
 sepalwidth_min = (0.1, 1.0, 1.4)
 sepalwidth_mean = (0.2, 1.3, 2.0)
 sepalwidth_max = (0.6, 1.8, 2.5)
-'''
+
+a=np.array([[4.3, 4.9, 4.9], [5.0, 5.9, 6.6], [5.8, 7.0, 7.9], [2.3, 2.0, 2.2], [3.4, 2.8, 3.0], [4.4, 3.4, 3.8]])
+df=pd.DataFrame(a, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['sepallength_min','sepallength_mean','sepallength_max', 'sepalwidth_min', 'sepalwidth_mean', 'sepalwidth_max'])
+
+df.plot(kind='bar', rot= 0, figsize= (10,5)) 
+plt.gcf().canvas.set_window_title('sepal comparsions')
+plt.show()
+
+
+b=np.array([[1.0, 3.0, 4.5], [1.5, 4.3, 5.5], [1.9, 5.1, 6.9], [0.1, 1.0, 1.4], [0.2, 1.3, 2.0], [0.6, 1.8, 2.5]])
+df=pd.DataFrame(b, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['petallength_min','petallength_mean','petallength_max', 'petalwidth_min', 'petalwidth_mean', 'petalwidth_max'])
+df.plot(kind='bar', rot= 0, figsize= (10,5)) 
+plt.gcf().canvas.set_window_title('petal comparsions')
+plt.show()
+
+
+
 
