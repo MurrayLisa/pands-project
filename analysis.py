@@ -16,20 +16,20 @@ from pandas import DataFrame
 
 # the Iris data sets is being read through the csv file
 iris_data = pd.read_csv('data.csv')
-'''
+
 iris_data.head()
 
 # Output the results of the data set that is the number of colums and rows
-iris_data.shape)
+(iris_data.shape)
 
 
 iris_data['class'].unique()
 (iris_data.groupby('class').size())
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
-'''
+
 iris_data2 = iris_data.set_index("class", drop = False)
 
-'''# Below data is a summary of all data, however it does not distunguish between the class/sprecies of iris
+# Below data is a summary of all data, however it does not distunguish between the class/sprecies of iris
 summary = iris_data.describe()
 summary = summary.transpose()
 print (summary.head())
@@ -38,7 +38,7 @@ iris_data.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=Fal
 plt.gcf().canvas.set_window_title('Iris Attributes Comparsions for all Species')
 plt.show()
 
-'''
+
 
 
 sepallength_min = [iris_data2.loc["Iris-setosa","sepallength"].min(), iris_data2.loc["Iris-versicolor","sepallength"].min(), iris_data2.loc["Iris-virginica","sepallength"].min()]
@@ -72,7 +72,7 @@ plt.gcf().canvas.set_window_title('petal comparsions')
 plt.show()
 
 
-'''
+
 # plotting box graph for sepal length
 sns.boxplot(x="class", y="sepallength", data=iris_data)
 plt.title('Sepal Length Comparsions')
@@ -119,4 +119,4 @@ plt.show()
 dataset = pd.melt(iris_data, "class", var_name="Attrubute")
 sns.swarmplot(x="Attrubute", y="value", hue="class", data=dataset)
 plt.gcf().canvas.set_window_title('Swarm Plot of all Iris Data')
-plt.show()'''
+plt.show()
