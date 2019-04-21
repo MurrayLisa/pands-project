@@ -16,8 +16,8 @@ from pandas import DataFrame
 
 # the Iris data sets is being read through the csv file
 iris_data = pd.read_csv('data.csv')
-
-'''iris_data.head()
+'''
+iris_data.head()
 
 # Output the results of the data set that is the number of colums and rows
 iris_data.shape)
@@ -26,10 +26,10 @@ iris_data.shape)
 iris_data['class'].unique()
 (iris_data.groupby('class').size())
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
-
+'''
 iris_data2 = iris_data.set_index("class", drop = False)
 
-# Below data is a summary of all data, however it does not distunguish between the class/sprecies of iris
+'''# Below data is a summary of all data, however it does not distunguish between the class/sprecies of iris
 summary = iris_data.describe()
 summary = summary.transpose()
 print (summary.head())
@@ -38,73 +38,24 @@ iris_data.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=Fal
 plt.gcf().canvas.set_window_title('Iris Attributes Comparsions for all Species')
 plt.show()
 
-
-
-print ("Iris-setosa max sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].max())
-print ("Iris-setosa mean sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].mean())
-print ("Iris-setosa min sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].min())
-
-print ("Iris-setosa max sepal width is: " , iris_data2.loc["Iris-setosa","sepalwidth"].max())
-print ("Iris-setosa mean sepal width is: " , iris_data2.loc["Iris-setosa","sepalwidth"].mean())
-print ("Iris-setosa min sepal width is: " , iris_data2.loc["Iris-setosa","sepalwidth"].min())
-
-print ("Iris-setosa max petal length is: " , iris_data2.loc["Iris-setosa","petallength"].max())
-print ("Iris-setosa mean petal length is: " , iris_data2.loc["Iris-setosa","petallength"].mean())
-print ("Iris-setosa min petal length is: " , iris_data2.loc["Iris-setosa","petallength"].min())
-
-print ("Iris-setosa max petal width is: " , iris_data2.loc["Iris-setosa","petalwidth"].max())
-print ("Iris-setosa mean petal width is: " , iris_data2.loc["Iris-setosa","petalwidth"].mean())
-print ("Iris-setosa min petal width is: " , iris_data2.loc["Iris-setosa","petalwidth"].min())
-
-print ("Iris-versicolor max sepal length is: " , iris_data2.loc["Iris-versicolor","sepallength"].max())
-print ("Iris-versicolor mean sepal length is: " , iris_data2.loc["Iris-versicolor","sepallength"].mean())
-print ("Iris-versicolor min sepal length is: " , iris_data2.loc["Iris-versicolor","sepallength"].min())
-
-print ("Iris-versicolor max sepal width is: " , iris_data2.loc["Iris-versicolor","sepalwidth"].max())
-print ("Iris-versicolor mean sepal width is: " , iris_data2.loc["Iris-versicolor","sepalwidth"].mean())
-print ("Iris-versicolor min sepal width is: " , iris_data2.loc["Iris-versicolor","sepalwidth"].min())
-
-print ("Iris-versicolor max petal length is: " , iris_data2.loc["Iris-versicolor","petallength"].max())
-print ("Iris-versicolor mean petal length is: " , iris_data2.loc["Iris-versicolor","petallength"].mean())
-print ("Iris-versicolor min petal length is: " , iris_data2.loc["Iris-versicolor","petallength"].min())
-
-print ("Iris-versicolor max petal width is: " , iris_data2.loc["Iris-versicolor","petalwidth"].max())
-print ("Iris-versicolor mean petal width is: " , iris_data2.loc["Iris-versicolor","petalwidth"].mean())
-print ("Iris-versicolor min petal width is: " , iris_data2.loc["Iris-versicolor","petalwidth"].min())
-
-print ("Iris-virginica max sepal length is: " , iris_data2.loc["Iris-virginica","sepallength"].max())
-print ("Iris-virginica mean sepal length is: " , iris_data2.loc["Iris-virginica","sepallength"].mean())
-print ("Iris-virginica min sepal length is: " , iris_data2.loc["Iris-virginica","sepallength"].min())
-
-print ("Iris-virginica max sepal width is: " , iris_data2.loc["Iris-virginica","sepalwidth"].max())
-print ("Iris-virginica mean sepal width is: " , iris_data2.loc["Iris-virginica","sepalwidth"].mean())
-print ("Iris-virginica min sepal width is: " , iris_data2.loc["Iris-virginica","sepalwidth"].min())
-
-print ("Iris-virginica max petal length is: " , iris_data2.loc["Iris-virginica","petallength"].max())
-print ("Iris-virginica mean petal length is: " , iris_data2.loc["Iris-virginica","petallength"].mean())
-print ("Iris-virginica min petal length is: " , iris_data2.loc["Iris-virginica","petallength"].min())
-
-print ("Iris-virginica max petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].max())
-print ("Iris-virginica mean petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].mean())
-print ("Iris-virginica min petal width is: " , iris_data2.loc["Iris-virginica","petalwidth"].min())
 '''
 
 
-sepallength_min = [4.3, 4.9, 4.9]
-sepallength_mean = [5.0, 5.9, 6.6]
-sepallength_max = [5.8, 7.0, 7.9]
+sepallength_min = [iris_data2.loc["Iris-setosa","sepallength"].min(), iris_data2.loc["Iris-versicolor","sepallength"].min(), iris_data2.loc["Iris-virginica","sepallength"].min()]
+sepallength_mean = [iris_data2.loc["Iris-setosa","sepallength"].mean(), iris_data2.loc["Iris-versicolor","sepallength"].mean(),iris_data2.loc["Iris-virginica","sepallength"].mean()]
+sepallength_max = [iris_data2.loc["Iris-setosa","sepallength"].max(), iris_data2.loc["Iris-versicolor","sepallength"].max(), iris_data2.loc["Iris-virginica","sepallength"].max()]
 
-sepalwidth_min = [2.3, 2.0, 2.2]
-sepalwidth_mean = [3.4, 2.8, 3.0]
-sepalwidth_max = [4.4, 3.4, 3.8]
+sepalwidth_min = [iris_data2.loc["Iris-setosa","sepalwidth"].min(), iris_data2.loc["Iris-versicolor","sepalwidth"].min(), iris_data2.loc["Iris-virginica","sepalwidth"].min()]
+sepalwidth_mean = [iris_data2.loc["Iris-setosa","sepalwidth"].mean(), iris_data2.loc["Iris-versicolor","sepalwidth"].mean(), iris_data2.loc["Iris-virginica","sepalwidth"].mean()]
+sepalwidth_max = [iris_data2.loc["Iris-setosa","sepalwidth"].max(), iris_data2.loc["Iris-versicolor","sepalwidth"].max(), iris_data2.loc["Iris-virginica","sepalwidth"].max()]
 
-petallength_min = [1.0, 3.0, 4.5]
-petallength_mean = [1.5, 4.3, 5.5]
-petallength_max = [1.9, 5.1, 6.9]
+petallength_min = [iris_data2.loc["Iris-setosa","petallength"].min(), iris_data2.loc["Iris-versicolor","petallength"].min(), iris_data2.loc["Iris-virginica","petallength"].min()]
+petallength_mean =[iris_data2.loc["Iris-setosa","petallength"].mean(), iris_data2.loc["Iris-versicolor","petallength"].mean(), iris_data2.loc["Iris-virginica","petallength"].mean()]
+petallength_max = [iris_data2.loc["Iris-setosa","petallength"].max(), iris_data2.loc["Iris-versicolor","petallength"].max(), iris_data2.loc["Iris-virginica","petallength"].max()]
 
-sepalwidth_min = [0.1, 1.0, 1.4]
-sepalwidth_mean = [0.2, 1.3, 2.0]
-sepalwidth_max = [0.6, 1.8, 2.5]
+petalwidth_min = [iris_data2.loc["Iris-setosa","petalwidth"].min(), iris_data2.loc["Iris-versicolor","petalwidth"].min(), iris_data2.loc["Iris-virginica","petalwidth"].min()]
+petalwidth_mean = [iris_data2.loc["Iris-setosa","petalwidth"].mean(), iris_data2.loc["Iris-versicolor","petalwidth"].mean(), iris_data2.loc["Iris-virginica","petalwidth"].mean()]
+petalwidth_max = [iris_data2.loc["Iris-setosa","petalwidth"].max(), iris_data2.loc["Iris-versicolor","petalwidth"].max(), iris_data2.loc["Iris-virginica","petalwidth"].max()]
 
 a=np.array([sepallength_min, sepallength_mean, sepallength_max, sepalwidth_min, sepalwidth_mean, sepalwidth_max])
 df=pd.DataFrame(a, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['sepallength_min','sepallength_mean','sepallength_max', 'sepalwidth_min', 'sepalwidth_mean', 'sepalwidth_max'])
@@ -114,7 +65,7 @@ plt.gcf().canvas.set_window_title('sepal comparsions')
 plt.show()
 
 
-b=np.array([petallength_min, petallength_mean, petallength_max, sepalwidth_min, sepalwidth_mean, sepalwidth_max])
+b=np.array([petallength_min, petallength_mean, petallength_max, petalwidth_min, petalwidth_mean, petalwidth_max])
 df=pd.DataFrame(b, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['petallength_min','petallength_mean','petallength_max', 'petalwidth_min', 'petalwidth_mean', 'petalwidth_max'])
 df.plot(kind='bar', rot= 0, figsize= (10,5)) 
 plt.gcf().canvas.set_window_title('petal comparsions')
