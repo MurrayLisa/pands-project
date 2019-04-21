@@ -24,8 +24,8 @@ iris_data['class'].unique()
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
 
 iris_data2 = iris_data.set_index("class", drop = False)
-
-'''print ("Iris-setosa max sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].max())
+'''
+print ("Iris-setosa max sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].max())
 print ("Iris-setosa mean sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].mean())
 print ("Iris-setosa min sepal length is: " , iris_data2.loc["Iris-setosa","sepallength"].min())
 
@@ -125,10 +125,44 @@ plt.show()
 sns.violinplot(x="class", y="petalwidth", data=iris_data)
 plt.title('Petal Width Comparsions')
 plt.gcf().canvas.set_window_title('Petal Width')
-plt.show()'''
+plt.show()
 
 
 dataset = pd.melt(iris_data, "class", var_name="Attrubute")
 sns.swarmplot(x="Attrubute", y="value", hue="class", data=dataset)
 plt.gcf().canvas.set_window_title('Swarm Plot of all Iris Data')
+plt.show()'''
+
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from pandas import DataFrame
+
+sepallength_min = [4.3, 4.9, 4.9]
+sepallength_mean = [5.0, 5.9, 6.6]
+sepallength_max = [5.8, 7.0, 7.9]
+
+
+a=np.array([[4.3, 4.9, 4.9], [5.0, 5.9, 6.6], [5.8, 7.0, 7.9]])
+df=DataFrame(a, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['min','mean','max'])
+
+df.plot(kind='bar')
+plt.gcf().canvas.set_window_title('sepal length')
 plt.show()
+
+
+'''
+sepalwidth_min = (2.3, 2.0, 2.2)
+sepalwidth_mean = (3.4, 2.8, 3.0)
+sepalwidth_max = (4.4, 3.4, 3.8)
+
+petallength_min = (1.0, 3.0, 4.5)
+petallength_mean = (1.5, 4.3, 5.5)
+petallength_max = (1.9, 5.1, 6.9)
+
+sepalwidth_min = (0.1, 1.0, 1.4)
+sepalwidth_mean = (0.2, 1.3, 2.0)
+sepalwidth_max = (0.6, 1.8, 2.5)
+'''
+
