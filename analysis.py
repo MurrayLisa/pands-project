@@ -144,11 +144,12 @@ sepallength_mean = [5.0, 5.9, 6.6]
 sepallength_max = [5.8, 7.0, 7.9]
 
 
-a=np.array([[4.3, 4.9, 4.9], [5.0, 5.9, 6.6], [5.8, 7.0, 7.9]])
-df=DataFrame(a, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['min','mean','max'])
+a=np.array([[4.3, 4.9, 4.9], [5.0, 5.9, 6.6], [5.8, 7.0, 7.9], [2.3, 2.0, 2.2], [3.4, 2.8, 3.0], [4.4, 3.4, 3.8]])
+df=pd.DataFrame(a, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['sepallength_min','sepallength_mean','sepallength_max', 'sepalwidth_min', 'sepalwidth_mean', 'sepalwidth_max'])
 
-df.plot(kind='bar')
-plt.gcf().canvas.set_window_title('sepal length')
+#y_pos = [2,2,2,2,2]
+df.plot(kind='bar', rot= 0, figsize= (10,5)) 
+plt.gcf().canvas.set_window_title('sepal comparsions')
 plt.show()
 
 
