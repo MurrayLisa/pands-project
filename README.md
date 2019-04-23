@@ -86,7 +86,9 @@ The swarm plot shows non-overlapping distribution of the attributes of the Iris 
 
 ![image](https://user-images.githubusercontent.com/47781978/56590288-c1cb9300-65de-11e9-9c7e-69c4bf3fbba7.png)
 
-Pairs Plots builds on two basic figures, the histogram and the scatter plot. The histogram on the diagonal allows us to see the distribution of a single variable while the scatter plots on the upper and lower triangles show the relationship (or lack thereof) between two variables
+Pairs Plots builds on two basic figures, the histogram and the scatter plot. The histogram on the diagonal allows us to see the distribution of a single variable while the scatter plots on the upper and lower triangles show the relationship (or lack thereof) between two variables. The pair plot in the case of the Iris species makes a clear case of how the iris-setosa is more unique than the iris-versicolor and the iris-virginica. However it can also be clearly seen that the iris-virginica is the larger flower by having a longer sepal and petal.
+
+[image](https://user-images.githubusercontent.com/47781978/56599780-2ee72480-65ef-11e9-9792-0e44599bb0b9.png)
 
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
@@ -97,3 +99,4 @@ Pairs Plots builds on two basic figures, the histogram and the scatter plot. The
 6. https://www.w3resource.com/graphics/matplotlib/barchart/matplotlib-barchart-exercise-11.php
 7. https://matplotlib.org/gallery/lines_bars_and_markers/barchart.html
 8. https://seaborn.pydata.org/generated/seaborn.violinplot.html
+9. https://seaborn.pydata.org/generated/seaborn.pairplot.html
