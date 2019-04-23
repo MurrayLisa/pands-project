@@ -17,11 +17,11 @@ The Iris flower data set or Fisher's Iris data set is a multivariate data set in
 
 The Liner discriminant was developed to distinguish species from each other. This data set is now the typical test case for many statistical classification techniques.
 
-The use of this data set in cluster analysis however is not common, since the data set only contains two clusters with rather obvious separation. One of the clusters contains Iris setosa, while the other cluster contains both Iris virginica and Iris versicolor and is not separable without the species information Fisher used[1]. 
+The use of this data set in cluster analysis however is not common, since the data set only contains two clusters with rather obvious separation. One of the clusters contains Iris setosa, while the other cluster contains both Iris virginica and Iris versicolor and is not separable without the species information Fisher used. 
 
 
 
-The sepals are the lower, or outermost part of the flower, they are usually green in color [2] however  in the case of the Iris flowers they are Purple, similar in colour to the petal. 
+The sepals are the lower, or outermost part of the flower, they are usually green in color however  in the case of the Iris flowers they are Purple, similar in colour to the petal. 
 As per the images below.
 
 
@@ -34,7 +34,7 @@ Click Clone or download
 Ensure file type is HTTPS and click Download Zip
 Extract file and save in desired location
 
-##Libraries Used
+## Libraries Used
 Pandas is an BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. (import pandas as pd) 
 
 Dataframe is a 2-dimensional labeled data structure with columns of potentially different types. (from pandas import Dataframe)
@@ -51,11 +51,12 @@ The Iris data was initially downloaded from https://datahub.io/machine-learning/
 iris_data = pd.read_csv(‘data.csv’)
 All of the data was then summarised to show the count, mean, standard deviation, min and max of all class/species of the iris data set. However this analysis does not distinguish between the flowers. 
  
- ![image](https://user-images.githubusercontent.com/47781978/56589257-c5f6b100-65dc-11e9-9fff-f8035777e1d0.png)
+  ![image](https://user-images.githubusercontent.com/47781978/56591376-892cb900-65e0-11e9-9cb3-38e786f313b8.png)
+
 
  Therefore the min, mean and max was calculated for each iris data set, that is the sepal length, sepal width, petal length and petal width for each of the three classes/species of the Iris flowers (Iris setosa, Iris virginica and Iris versicolor). 
 
-#picture of plot to be inserted
+![image](https://user-images.githubusercontent.com/47781978/56589257-c5f6b100-65dc-11e9-9fff-f8035777e1d0.png)
 
 Two bar graphs are then plotted one for sepal comparisons and one for petal comparisons:
 
