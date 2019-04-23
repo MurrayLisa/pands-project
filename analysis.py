@@ -135,8 +135,8 @@ plt.gcf().canvas.set_window_title('Petal Width')
 plt.show()
 
 #simplifying the data set to plot a swarmplot that shows the data without over lapping the data points 
-dataset = pd.melt(iris_data, "class", var_name="Attrubute")
-sns.swarmplot(x="Attrubute", y="value", hue="class", data=dataset)
+dataset = pd.melt(iris_data, "class", var_name="Attribute")
+sns.swarmplot(x="Attribute", y="value", hue="class", data=dataset)
 plt.title('Swarm Plot of all Iris Data')
 plt.gcf().canvas.set_window_title('Swarm Plot of all Iris Data')
 plt.show()
