@@ -85,10 +85,7 @@ df=pd.DataFrame(b, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], 
 df.plot(kind='bar', rot= 0, figsize= (10,5)) 
 plt.gcf().canvas.set_window_title('Petal Comparsions')
 plt.title('Petal Comparsions',x=0.5, y=1)
-          
 plt.show()
-
-
 
 # plotting box graph for Sepal Length
 sns.boxplot(x="class", y="sepallength", data=iris_data)
@@ -148,6 +145,12 @@ plt.show()
 
 # Ploting a scatter plot
 sns.pairplot(iris_data, hue="class", height=2, aspect =1)
+plt.gcf().canvas.set_window_title('Pair Plot for all Species')
+#show plot
+plt.show()
+
+# Ploting a scatter plot with regressio nmodels
+sns.pairplot(iris_data, kind="reg",hue="class", height=2, aspect =1)
 plt.gcf().canvas.set_window_title('Pair Plot for all Species')
 #show plot
 plt.show()

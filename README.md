@@ -90,6 +90,8 @@ Pairs Plots builds on two basic figures, the histogram and the scatter plot. The
 
 ![image](https://user-images.githubusercontent.com/47781978/56599780-2ee72480-65ef-11e9-9792-0e44599bb0b9.png)
 
+Linear regression model OF the scatter plots:
+![image](https://user-images.githubusercontent.com/47781978/56601522-46c0a780-65f3-11e9-9c78-e13da78a37d4.png)
 
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
