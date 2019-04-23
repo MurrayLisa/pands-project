@@ -80,11 +80,15 @@ plt.show()
 b=np.array([petallength_min, petallength_mean, petallength_max, petalwidth_min, petalwidth_mean, petalwidth_max])
 df=pd.DataFrame(b, columns=['Iris-setosa','Iris-versicolor ','Iris-virginica'], index=['petallength_min','petallength_mean','petallength_max', 'petalwidth_min', 'petalwidth_mean', 'petalwidth_max'])
 
+
 #Plotting the data for Petal Comparsions
 df.plot(kind='bar', rot= 0, figsize= (10,5)) 
 plt.gcf().canvas.set_window_title('Petal Comparsions')
 plt.title('Petal Comparsions',x=0.5, y=1)
+          
 plt.show()
+
+
 
 # plotting box graph for Sepal Length
 sns.boxplot(x="class", y="sepallength", data=iris_data)
@@ -139,4 +143,11 @@ dataset = pd.melt(iris_data, "class", var_name="Attribute")
 sns.swarmplot(x="Attribute", y="value", hue="class", data=dataset)
 plt.title('Swarm Plot of all Iris Data')
 plt.gcf().canvas.set_window_title('Swarm Plot of all Iris Data')
+plt.show()
+
+
+# Ploting a scatter plot
+sns.pairplot(iris_data, hue="class", height=2, aspect =1)
+plt.gcf().canvas.set_window_title('Pair Plot for all Species')
+#show plot
 plt.show()

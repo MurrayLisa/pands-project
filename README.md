@@ -86,6 +86,7 @@ The swarm plot shows non-overlapping distribution of the attributes of the Iris 
 
 ![image](https://user-images.githubusercontent.com/47781978/56590288-c1cb9300-65de-11e9-9c7e-69c4bf3fbba7.png)
 
+Pairs Plots builds on two basic figures, the histogram and the scatter plot. The histogram on the diagonal allows us to see the distribution of a single variable while the scatter plots on the upper and lower triangles show the relationship (or lack thereof) between two variables
 
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
