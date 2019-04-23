@@ -51,7 +51,7 @@ The Iris data was initially downloaded from https://datahub.io/machine-learning/
 iris_data = pd.read_csv(‘data.csv’)
 All of the data was then summarised to show the count, mean, standard deviation, min and max of all class/species of the iris data set. However this analysis does not distinguish between the flowers. 
  
- #picture of table to be inserted
+ ![image](https://user-images.githubusercontent.com/47781978/56589257-c5f6b100-65dc-11e9-9fff-f8035777e1d0.png)
 
  Therefore the min, mean and max was calculated for each iris data set, that is the sepal length, sepal width, petal length and petal width for each of the three classes/species of the Iris flowers (Iris setosa, Iris virginica and Iris versicolor). 
 
@@ -59,20 +59,32 @@ All of the data was then summarised to show the count, mean, standard deviation,
 
 Two bar graphs are then plotted one for sepal comparisons and one for petal comparisons:
 
-#picture of plot to be inserted
+![image](https://user-images.githubusercontent.com/47781978/56589366-fb9b9a00-65dc-11e9-9908-47c4ca3588b1.png)
+
+![image](https://user-images.githubusercontent.com/47781978/56589435-21c13a00-65dd-11e9-9e38-17bfaabe7f60.png)
 
 From these two graphs it is clear that there are bigger variations between all of the species in the petal comparisons, the  Iris setosa is more distinguishable that the Iris virginica and Iris versicolor.
 Boxplot graphs were then used to compare the distribution of  sepal length, sepal width, petal length, petal width.
 
-#picture of plot to be inserted
+![image](https://user-images.githubusercontent.com/47781978/56589501-474e4380-65dd-11e9-8e3c-bcacc864095d.png)
+![image](https://user-images.githubusercontent.com/47781978/56589563-6947c600-65dd-11e9-8cea-8b11e273dc41.png)
+![image](https://user-images.githubusercontent.com/47781978/56589636-8bd9df00-65dd-11e9-8b74-85af1acca752.png)
+![image](https://user-images.githubusercontent.com/47781978/56589719-b461d900-65dd-11e9-9fc4-093e381e6511.png)
 
 From the Boxplot, we can see that there are distinct differences between the sepal length, petal length and  petal width and across the species. The sepal width has a cross over between then Iris virginica and Iris versicolor
 
 Similar to the bar chart the a violin plot shows there are bigger variations between all of the species in the petal comparisons, the  Iris setosa is more distinguishable that the Iris virginica and Iris versicolor. The violin plot was  used to display the distribution of the data and its probability density. The thick black bar in the center represents the interquartile range, the thin black line extended from it represents the 95% confidence intervals, and the white dot is the mean.
 
-#picture of plot to be inserted
+![image](https://user-images.githubusercontent.com/47781978/56589801-d9564c00-65dd-11e9-8d66-e4f7f9093042.png)
+![image](https://user-images.githubusercontent.com/47781978/56589877-fa1ea180-65dd-11e9-94da-83126f81f8e9.png)
+![image](https://user-images.githubusercontent.com/47781978/56589949-18849d00-65de-11e9-8688-59fe9e2a560b.png)
+![image](https://user-images.githubusercontent.com/47781978/56590040-41a52d80-65de-11e9-82bf-92ef84299452.png)
+
 
 The swarm plot shows non-overlapping distribution of the attributes of the Iris species. This graph similar to above showed the petal length and width is the more distinguishing feature.  
+
+![image](https://user-images.githubusercontent.com/47781978/56590288-c1cb9300-65de-11e9-9c7e-69c4bf3fbba7.png)
+
 
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
