@@ -97,6 +97,9 @@ Hexagonal Bin Plot. Was a useful alternative to scatter plots as the data for ir
 
 ![image](https://user-images.githubusercontent.com/47781978/56682393-5c9d9d80-66c3-11e9-826e-ea42787e4223.png)
 
+Andrews curve is a way to visualize structure in high-dimensional data. This Plot once again shows clearly that one type of iris (iris-setosa) is distinct from the other two but differentiating between the other two is less easy.
+
+![image](https://user-images.githubusercontent.com/47781978/56691712-890fe480-66d8-11e9-9e26-a0a2da6a955a.png)
 
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
@@ -109,3 +112,4 @@ Hexagonal Bin Plot. Was a useful alternative to scatter plots as the data for ir
 8. https://seaborn.pydata.org/generated/seaborn.violinplot.html
 9. https://seaborn.pydata.org/generated/seaborn.pairplot.html
 10. https://seaborn.pydata.org/generated/seaborn.jointplot.html
+11. https://medium.com/we-are-orb/introduction-to-data-visualization-with-pandas-21709985ff67

@@ -26,7 +26,7 @@ print (iris_data.groupby('class').size())
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
 
 iris_data2 = iris_data.set_index("class", drop = False)
-
+'''
 # Prints a table with the summary of the class, count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values.
 summary = iris_data.describe()
 summary = summary.transpose()
@@ -158,4 +158,12 @@ plt.show()
 # Ploting a Hexagonal Bin Plot
 sns.jointplot(x="sepallength", y="sepalwidth", data=iris_data, height=5,ratio=10, kind='hex',color='green')
 plt.gcf().canvas.set_window_title('Hexagonal Bin Plot of Iris Data')
+plt.show()
+'''
+#Plotting Andrews plot
+# importing the andrew curve from pandas
+from pandas.plotting import andrews_curves
+andrews_curves(iris_data, 'class')
+plt.gcf().canvas.set_window_title('Andrews Plot of the Iris Species')
+plt.title('Andrews Plot of all Iris Data')
 plt.show()
