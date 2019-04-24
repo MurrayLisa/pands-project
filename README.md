@@ -90,8 +90,13 @@ Pairs Plots builds on two basic figures, the histogram and the scatter plot. The
 
 ![image](https://user-images.githubusercontent.com/47781978/56599780-2ee72480-65ef-11e9-9792-0e44599bb0b9.png)
 
-Linear regression model OF the scatter plots:
+Linear regression model of the pair scatter plots:
 ![image](https://user-images.githubusercontent.com/47781978/56601522-46c0a780-65f3-11e9-9c78-e13da78a37d4.png)
+
+Hexagonal Bin Plot. Was a useful alternative to scatter plots as the data for iris-versicolor and the iris-virginica is too dense to plot each point individually. The darker Hexagons show where the most common cross over is between the three species.
+
+![image](https://user-images.githubusercontent.com/47781978/56682393-5c9d9d80-66c3-11e9-826e-ea42787e4223.png)
+
 
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
@@ -103,3 +108,4 @@ Linear regression model OF the scatter plots:
 7. https://matplotlib.org/gallery/lines_bars_and_markers/barchart.html
 8. https://seaborn.pydata.org/generated/seaborn.violinplot.html
 9. https://seaborn.pydata.org/generated/seaborn.pairplot.html
+10. https://seaborn.pydata.org/generated/seaborn.jointplot.html

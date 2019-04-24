@@ -149,8 +149,13 @@ plt.gcf().canvas.set_window_title('Pair Plot for all Species')
 #show plot
 plt.show()
 
-# Ploting a scatter plot with regressio nmodels
+# Ploting a scatter plot with regression models
 sns.pairplot(iris_data, kind="reg",hue="class", height=2, aspect =1)
 plt.gcf().canvas.set_window_title('Pair Plot for all Species')
 #show plot
+plt.show()
+
+# Ploting a Hexagonal Bin Plot
+sns.jointplot(x="sepallength", y="sepalwidth", data=iris_data, height=5,ratio=10, kind='hex',color='green')
+plt.gcf().canvas.set_window_title('Hexagonal Bin Plot of Iris Data')
 plt.show()
