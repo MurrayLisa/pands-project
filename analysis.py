@@ -18,11 +18,11 @@ from pandas import DataFrame
 iris_data = pd.read_csv('data.csv')
 
 # Output the results of the data set that is the number of colums and rows
-print ('Number of Rows and Colums in data set:', iris_data.shape)
+print ('Number of Rows and Colums in data set:', iris_data.shape, '\n')
 
 # Analyses the Iris data set by class and size and prints out the number of data available per class/species
 iris_data['class'].unique()
-print (iris_data.groupby('class').size())
+print (iris_data.groupby('class').size(), '\n')
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
 
 iris_data2 = iris_data.set_index("class", drop = False)
@@ -159,7 +159,7 @@ plt.show()
 sns.jointplot(x="sepallength", y="sepalwidth", data=iris_data, height=5,ratio=10, kind='hex',color='green')
 plt.gcf().canvas.set_window_title('Hexagonal Bin Plot of Iris Data')
 plt.show()
-'''
+
 #Plotting Andrews plot
 # importing the andrew curve from pandas
 from pandas.plotting import andrews_curves
@@ -167,3 +167,85 @@ andrews_curves(iris_data, 'class')
 plt.gcf().canvas.set_window_title('Andrews Plot of the Iris Species')
 plt.title('Andrews Plot of all Iris Data')
 plt.show()
+'''
+# importing scikit-learn, a tool used in machine learning for data mining and data analysis;
+from sklearn import model_selection
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
+
+# with scikit learn (sklearn) there can be forced future warnings that do not impact the output of the code, here the warning outputs are being 'turned off'
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
+
+
+# Split-out validation dataset, first defining the array
+array = iris_data.values
+# defining the size of the axis
+X = array[:,0:4]
+Y = array[:,4]
+validation_size = 0.15
+seed = 7
+X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=validation_size, random_state=seed)
+
+# Test options and evaluation metric, a seed is an initial number used as the starting point in a random number generating algorithm
+seed = 7
+scoring = 'accuracy'
+
+
+# Checking the Algorithms for Logistic Regression (LR), Linear Discriminant Analysis (LDA), K-Nearest Neighbors (KNN), 
+# Classification and Regression Trees (CART), Gaussian Naive Bayes (NB) and Support Vector Machines (SVM).
+models = []
+models.append(('LR', LogisticRegression()))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+models.append(('KNN', KNeighborsClassifier()))
+models.append(('CART', DecisionTreeClassifier()))
+models.append(('NB', GaussianNB()))
+models.append(('SVM', SVC()))
+
+# Using a for loop each model is being evaluated in turn
+results = []
+names = []
+print('Mean and Standard Deviation of the Various Algorthims: ')
+for name, model in models:
+	kfold = model_selection.KFold(n_splits=10, random_state=seed)
+	cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+	results.append(cv_results)
+	names.append(name)
+	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+	print(msg)
+    
+#printing out blank lines to make data more presentable    
+print ("")
+
+# Compare Algorithims for accuracy and printing a box plot with the results
+fig = plt.figure()
+fig.suptitle('Algorithm Comparison')
+ax = fig.add_subplot(111)
+plt.boxplot(results)
+ax.set_xticklabels(names)
+plt.gcf().canvas.set_window_title('Comparsion of accuracy of the Algorithims')
+plt.show()
+
+# Make predictions on validation dataset
+svm = SVC()
+svm.fit(X_train, Y_train)
+predictions = svm.predict(X_validation)
+print('Accurarcy score: ', accuracy_score(Y_validation, predictions),'\n')
+
+# Confusion matrix to evaluate the quality of the output of a classifier on the iris data set. 
+print('Confusion Matrix: ')
+print(confusion_matrix(Y_validation, predictions))
+
+#Classification report of the accurracy of the SVM Algorithim
+print("")
+print('Classification Report: ')
+print(classification_report(Y_validation, predictions))
