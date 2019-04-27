@@ -45,6 +45,8 @@ Seaborn is a Python data visualization library based on matplotlib. It provides 
 
 Matplotlib.pyplot s a state-based interface to matplotlib. It provides a MATLAB-like way of plotting. pyplot is mainly intended for interactive plots and simple cases of programmatic plot generation (import matplotlib.pyplot as plt).
 
+sklearn library contains a lot of effiecient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. Scikit-learn is used to build models.
+
 
 ##Data review and Findings
 The Iris data was initially downloaded from https://datahub.io/machine-learning/iris#resource-iris as a data.csv file.  CSV (comma-separated values) is a simple file format used to store tabular data, such as a spreadsheet or database.
@@ -101,6 +103,27 @@ Andrews curve is a way to visualize structure in high-dimensional data. This Plo
 
 ![image](https://user-images.githubusercontent.com/47781978/56691712-890fe480-66d8-11e9-9e26-a0a2da6a955a.png)
 
+## Evaluating Algorithms 
+From the plots above it can be seen that the Iris setosa, Iris virginica and Iris versicolor can be partially separated. Therefore a sample of linear (Logistic Regression (LR) and Linear Discriminant Analysis (LDA)) and nonlinear (K-Nearest Neighbors (KNN), Classification and Regression Trees (CART), Gaussian Naive Bayes (NB), Support Vector Machines (SVM) algorithims were evaluated:
+
+![image](https://user-images.githubusercontent.com/47781978/56853650-a7692080-6922-11e9-9001-7515abadf1ab.png)
+
+From the output it can be seen that the Support Vector Model (SVM) has the highest accuracy.  
+
+![image](https://user-images.githubusercontent.com/47781978/56853414-5572cb80-691f-11e9-97ea-4ee1feaf5717.png)
+
+The box plot and whisker plot show Linear Discriminant Analysis, Classification and Regression Trees and Support Vector Machines achieving 100% accuracy.
+
+To make a prediction using the SVM model it was directly ran on the validation set and the results were summarized as a final accuracy score, a confusion matrix and a classification report.
+ 
+![image](https://user-images.githubusercontent.com/47781978/56853696-26f6ef80-6923-11e9-8931-f83e630f45ce.png)
+
+We can see that the accuracy is approximately 0.91 or 91%.
+
+The confusion matrix evaluates the quality of the output of a classifier on the iris data set. The diagonal elements represent the number of points for which the predicted label is equal to the true label, while off-diagonal elements are those that are mislabeled by the classifier. In this case the confusion matrix provides an indication that three errors were made. 
+
+The f1-score gives us the harmonic mean of precision and recall. The scores corresponding to every class will tells us the accuracy of the classifier in classifying the data points in that particular class compared to all other classes. The support is the number of samples of the true response that lie in that class. The classification reports shows excellent results.
+
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
 2. https://www.quora.com/What-is-the-difference-between-sepals-and-petals
@@ -113,3 +136,7 @@ Andrews curve is a way to visualize structure in high-dimensional data. This Plo
 9. https://seaborn.pydata.org/generated/seaborn.pairplot.html
 10. https://seaborn.pydata.org/generated/seaborn.jointplot.html
 11. https://medium.com/we-are-orb/introduction-to-data-visualization-with-pandas-21709985ff67
+12. http://www.discoversdk.com/blog/machine-learning-with-python-part-2
+13. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+14. https://stats.stackexchange.com/questions/117654/what-does-the-numbers-in-the-classification-report-of-sklearn-mean
+
