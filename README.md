@@ -124,6 +124,13 @@ The confusion matrix evaluates the quality of the output of a classifier on the 
 
 The f1-score gives us the harmonic mean of precision and recall. The scores corresponding to every class will tells us the accuracy of the classifier in classifying the data points in that particular class compared to all other classes. The support is the number of samples of the true response that lie in that class. The classification reports shows excellent results.
 
+## Predicting the Species
+
+Using the SVM model, users can input the Sepal Length (cm),  Sepal Width (cm), Petal Length (cm) and Petal Width (cm) and the algorthim will predict the species of iris flower that the user has the dimensions for. 
+
+![image](https://user-images.githubusercontent.com/47781978/56854772-da67e000-6933-11e9-87c6-676421c30d50.png)
+
+
 ## References
 1. https://en.wikipedia.org/wiki/Iris_flower_data_set
 2. https://www.quora.com/What-is-the-difference-between-sepals-and-petals
@@ -139,4 +146,6 @@ The f1-score gives us the harmonic mean of precision and recall. The scores corr
 12. http://www.discoversdk.com/blog/machine-learning-with-python-part-2
 13. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
 14. https://stats.stackexchange.com/questions/117654/what-does-the-numbers-in-the-classification-report-of-sklearn-mean
+15. https://docs.python-guide.org/scenarios/ml/
+
 

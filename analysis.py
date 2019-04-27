@@ -26,7 +26,7 @@ print (iris_data.groupby('class').size(), '\n')
 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica'
 
 iris_data2 = iris_data.set_index("class", drop = False)
-'''
+
 # Prints a table with the summary of the class, count, mean, standard deviation, minimum, 25%, 50%, 75% and maximum values.
 summary = iris_data.describe()
 summary = summary.transpose()
@@ -167,7 +167,7 @@ andrews_curves(iris_data, 'class')
 plt.gcf().canvas.set_window_title('Andrews Plot of the Iris Species')
 plt.title('Andrews Plot of all Iris Data')
 plt.show()
-'''
+
 # importing scikit-learn, a tool used in machine learning for data mining and data analysis;
 from sklearn import model_selection
 from sklearn.metrics import classification_report
@@ -214,7 +214,7 @@ models.append(('KNN', KNeighborsClassifier()))
 models.append(('CART', DecisionTreeClassifier()))
 models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC()))
-'''
+
 # Using a for loop each model is being evaluated in turn
 results = []
 names = []
@@ -239,7 +239,7 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.gcf().canvas.set_window_title('Comparsion of accuracy of the Algorithims')
 plt.show()
-'''
+
 # Make predictions on validation dataset
 svm = SVC()
 svm.fit(X_train, Y_train)
@@ -256,14 +256,14 @@ print('Classification Report: ')
 print(classification_report(Y_validation, predictions))
 
 #Defining the user input required
-sepalWidth = input("Please enter Sepal width: ")
-sepalLength = input("Please enter Sepal length: ")
-petalWidth = input("Please enter Petal width: ")
-petalLength = input("Please enter Petal length: ")
+sepalWidth = input("Please enter Sepal width (cm): ")
+sepalLength = input("Please enter Sepal length (cm): ")
+petalWidth = input("Please enter Petal width (cm): ")
+petalLength = input("Please enter Petal length (cm): ")
+print ()
 
 # Assigning the variables inputted by user into an array
 flowerArray = [sepalWidth, sepalLength, petalWidth, petalLength]
-
 
 #Loading the data set
 iris = load_iris()
