@@ -179,6 +179,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.datasets import load_iris
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+import numpy as np
 
 # with scikit learn (sklearn) there can be forced future warnings that do not impact the output of the code, here the warning outputs are being 'turned off'
 def warn(*args, **kwargs):
@@ -210,12 +214,13 @@ models.append(('KNN', KNeighborsClassifier()))
 models.append(('CART', DecisionTreeClassifier()))
 models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC()))
-
+'''
 # Using a for loop each model is being evaluated in turn
 results = []
 names = []
 print('Mean and Standard Deviation of the Various Algorthims: ')
 for name, model in models:
+    #This will split our dataset into 10 parts, train on 9 and test on 1 and repeat for all combinations of train-test splits
 	kfold = model_selection.KFold(n_splits=10, random_state=seed)
 	cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
 	results.append(cv_results)
@@ -234,7 +239,7 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.gcf().canvas.set_window_title('Comparsion of accuracy of the Algorithims')
 plt.show()
-
+'''
 # Make predictions on validation dataset
 svm = SVC()
 svm.fit(X_train, Y_train)
@@ -249,3 +254,26 @@ print(confusion_matrix(Y_validation, predictions))
 print("")
 print('Classification Report: ')
 print(classification_report(Y_validation, predictions))
+
+#Defining the user input required
+sepalWidth = input("Please enter Sepal width: ")
+sepalLength = input("Please enter Sepal length: ")
+petalWidth = input("Please enter Petal width: ")
+petalLength = input("Please enter Petal length: ")
+
+# Assigning the variables inputted by user into an array
+flowerArray = [sepalWidth, sepalLength, petalWidth, petalLength]
+
+
+#Loading the data set
+iris = load_iris()
+x = iris.data # storing feature matrix in "X"
+y = iris.target # storing response vector in "y"
+
+# fitting the data set
+svm.fit(x, y)
+#Predicting the species
+result = svm.predict([flowerArray])
+
+#defining the output 
+print("This is most likely the ", iris.target_names[result], "species.")
